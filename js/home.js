@@ -1,13 +1,10 @@
-function toggleEditSection() {
-    var section = document.getElementById("editSection");
-    var chat = document.getElementById("chatContainer");
-    section.style.display = section.style.display === "none" || section.style.display === "" ? "block" : "none";
-    chat.style.display = "none"; 
-}
+function showSection(sectionId) {
+    document.getElementById("inicio").classList.add("hidden");
+    document.getElementById("editSection").classList.add("hidden");
+    document.getElementById("chatContainer").classList.add("hidden");
 
-function toggleChat() {
-    var chat = document.getElementById("chatContainer");
-    var section = document.getElementById("editSection");
-    chat.style.display = chat.style.display === "none" || chat.style.display === "" ? "flex" : "none";
-    section.style.display = "none"; 
+    if (sectionId) {
+        document.getElementById(sectionId).classList.remove("hidden");
+    }
 }
+showSection('inicio');

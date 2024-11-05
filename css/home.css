@@ -1,3 +1,7 @@
+body{
+  background-image: linear-gradient(to bottom, #e8dff5, #e3e2f7, #dee5f8, #dbe8f7, #daeaf6);
+      background-attachment: fixed;
+}
 .navbar-custom {
     background-color: #e8dff5;
 }
@@ -5,20 +9,34 @@
     width: 40px;
     height: 40px;
 }
+/*  Seccion de Edicion */
+#editSection {
+  transition: all 0.3s ease; /* Suaviza la transición */
+  background-color: #fff5ffc5;
+  margin-top: 20px;
+  border-radius: 30px!important;
+}
 
-/* Sección oculta inicialmente */
-#editSection{
-    display: none;
-    background-color: #fcf4dd;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 20px;
+.hidden {   /*  Para que no se vean las secciones */
+  display: none !important;
 }
 
 .form-label {
-    color: #6c757d;
-    font-weight: bold;
+  color: #000000;
+  font-weight: bold;
 }
+
+.form-text {
+  font-size: 0.875rem; 
+  color: #6c757d;
+}
+
+.btn {
+  border-radius: 50px; 
+}
+
+
+
 /* Chat */
 .chatcontainer {
     width: 300px;
@@ -152,3 +170,41 @@
   .send-icon {
     width: 17px;
   }
+
+  /* Seccion de Inicio */
+  #inicio { background-color: #e8dff5; }
+  #about { background-color: #fce1e4; }
+  #services { background-color: #fcf4dd; }
+  #testimonials { background-color: #ddedea; }
+  #footer { background-color: #daeaf6; color: #333; padding: 20px 0; }
+  
+  .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+  }
+  .hero-section {
+      padding: 60px 0;
+      color: #333;
+  }
+  .hero-section .btn-primary {
+      background-color: #fce1e4;
+      border-color: #fce1e4;
+  }
+  .service-box, .testimonial-box {
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+  }
+  /* Footer */
+  .footer-links a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 15px;
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
