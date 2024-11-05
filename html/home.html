@@ -1,215 +1,225 @@
-<<<<<<< HEAD:home.html
+
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar con Paleta de Colores Pastel y Sección Editable</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="home.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nutrichat</title>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet" href="../css/home.css">
+        <link rel="icon" href="/img/logosinletra.PNG" type="image/x-icon">
 
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container-fluid">
-            <!-- Logo a la izquierda -->
-            <a class="navbar-brand" href="#">
-                <img src="ruta-a-tu-logo.png" alt="Logo">
-            </a>
-            
-            <!-- Botón de colapso para dispositivos móviles -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container-fluid">
+                <!-- Logo a la izquierda -->
+                <a class="navbar-brand" href="#" onclick="showSection('inicio')"> NutriChat
+                    <img src="/img/logosinletra.PNG" alt="Logo" onclick="showSection('inicio')">
+                </a>
 
-            <!-- Enlaces de navegación a la derecha -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Info</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="toggleEditSection()">Editar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Gráficos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="toggleChat()">Chat</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+                <!-- Botón de colapso para dispositivos móviles -->
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    <!-- Sección del chat -->
-    <div id="chatContainer" class="chatcontainer">
-        <div class="nav-barchat">
-            <a>Chat</a>
-            <div class="close" onclick="toggleChat()">
-                <div class="line one"></div>
-                <div class="line two"></div>
-            </div>
-        </div>
-        <div class="messages-area">
-            <div class="message one"></div>
-            <div class="message two"></div>
-            <div class="message three"></div>
-            <div class="message four"></div>
-            <div class="message five"></div>
-            <div class="message six"></div>
-        </div>
-        <div class="sender-area">
-            <div class="input-place">
-                <input placeholder="Send a message." class="send-input" type="text">
-                <div class="send">
-                    <svg class="send-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="#6B6C7B" d="M481.508,210.336L68.414,38.926c-17.403-7.222-37.064-4.045-51.309,8.287C2.86,59.547-3.098,78.551,1.558,96.808 L38.327,241h180.026c8.284,0,15.001,6.716,15.001,15.001c0,8.284-6.716,15.001-15.001,15.001H38.327L1.558,415.193 c-4.656,18.258,1.301,37.262,15.547,49.595c14.274,12.357,33.937,15.495,51.31,8.287l413.094-171.409 C500.317,293.862,512,276.364,512,256.001C512,235.638,500.317,218.139,481.508,210.336z"></path>
-                    </svg>
+                <!-- Enlaces de navegación a la derecha -->
+                <div class="collapse navbar-collapse justify-content-end"
+                    id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"
+                                onclick="showSection('inicio')">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"
+                                onclick="showSection('')">Info</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"
+                                onclick="showSection('editSection')">Editar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"
+                                onclick="showSection('')">Gráficos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"
+                                onclick="showSection('chatContainer')">Chat</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </nav>
+        <div>
+            <!-- Sección de Inicio -->
+
+            <section id="inicio" class="hero-section text-center">
+                <div class="container">
+                    <h1 class="display-4">Bienvenido a NutriChat</h1>
+                    <!-- <img src="/img/" alt=""> -->
+                    <p class="lead">Conectando bienestar y nutrición en un solo
+                        lugar.</p>
+                </div>
+
+                <!-- Sección Sobre Nosotros -->
+                <section id="about" class="py-5 text-center">
+                    <div class="container">
+                        <h2 class="section-title">Sobre Nosotros</h2>
+                        <p>Somos una plataforma de chat dedicada a mejorar tu
+                            salud y bienestar a través de la nutrición. Nos
+                            apasiona ayudarte a alcanzar tus metas.</p>
+                    </div>
+                </section>
+
+                <!-- Sección de Servicios -->
+                <section id="services" class="py-5 text-center">
+                    <div class="container">
+                        <h2 class="section-title">Nuestros Servicios</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="service-box">
+                                    <h3>Asesoría Nutricional</h3>
+                                    <p>Recibe consejos personalizados para
+                                        mejorar tu salud.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="service-box">
+                                    <h3>Seguimiento Diario</h3>
+                                    <p>Chatea a diario para recibir consejos
+                                        nutricionales</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="service-box">
+                                    <h3>Planificación de Comidas</h3>
+                                    <p>Obtén planes de comidas adaptados a tus
+                                        objetivos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección de Testimonios -->
+                <section id="testimonials" class="py-5">
+                    <div class="container">
+                        <h2 class="section-title text-center">Testimonios</h2>
+                        <div class="row text-center">
+                            <div class="col-md-6">
+                                <div class="testimonial-box">
+                                    <p>"NutriChat me ayudó a bajar de peso, baje 10 gramos."</p>
+                                    <footer class="blockquote-footer">Yaser
+                                        Tabares</footer>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="testimonial-box">
+                                    <p>"Gracias a NutriChat y mi novia baje 50 kg."</p>
+                                    <footer class="blockquote-footer">Pablo
+                                        Ochoa</footer>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- footwer -->
+                <footer class="text-center" id="footer">
+                    <div class="container">
+                        <p class="mb-1">&copy; 2024 NutriChat. Todos los
+                            derechos reservados.</p>
+                        <div class="footer-links">
+                            <a href="#">Política de Privacidad</a>
+                            <a href="#">Términos de Servicio</a>
+                            <a href="#">Soporte</a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="#"><img src="/img/facebook.png"
+                                    alt="Facebook" width="24"></a>
+                            <a href="#"><img src="/img/twitter.png"
+                                    alt="Twitter" width="24"></a>
+                            <a
+                                href="https://www.instagram.com/p/C_XAcXAJXz3/"><img
+                                    src="/img/instagram.png" alt="Instagram"
+                                    width="24"></a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </section>
+
+        <!-- Sección del chat -->
+        <div id="chatContainer" class="chatcontainer" >
+            <div class="nav-barchat">
+                <a>Chat</a>
+                <div class="close" onclick="toggleChat()">
+                    <div class="line one"></div>
+                    <div class="line two"></div>
+                </div>
+            </div>
+            <div class="messages-area">
+                <div class="message one"></div>
+                <div class="message two"></div>
+                <div class="message three"></div>
+                <div class="message four"></div>
+                <div class="message five"></div>
+                <div class="message six"></div>
+            </div>
+            <div class="sender-area">
+                <div class="input-place">
+                    <input placeholder="Send a message." class="send-input"
+                        type="text">
+                    <div class="send">
+                        <svg class="send-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <path fill="#6B6C7B"
+                                d="M481.508,210.336L68.414,38.926c-17.403-7.222-37.064-4.045-51.309,8.287C2.86,59.547-3.098,78.551,1.558,96.808 L38.327,241h180.026c8.284,0,15.001,6.716,15.001,15.001c0,8.284-6.716,15.001-15.001,15.001H38.327L1.558,415.193 c-4.656,18.258,1.301,37.262,15.547,49.595c14.274,12.357,33.937,15.495,51.31,8.287l413.094-171.409 C500.317,293.862,512,276.364,512,256.001C512,235.638,500.317,218.139,481.508,210.336z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <!-- Sección de Edición -->
-    <div class="container">
-        <div id="editSection">
-            <h4 class="text-center">Editar Información Personal</h4>
-            <form>
-                <div class="mb-3">
-                    <label for="peso" class="form-label">Peso (kg):</label>
-                    <input type="number" class="form-control" id="peso" placeholder="Ingresa tu peso">
-                </div>
-                <div class="mb-3">
-                    <label for="altura" class="form-label">Altura (cm):</label>
-                    <input type="number" class="form-control" id="altura" placeholder="Ingresa tu altura">
-                </div>
-                <div class="mb-3">
-                    <label for="ingestaCalorica" class="form-label">Ingesta Calórica (kcal):</label>
-                    <input type="number" class="form-control" id="ingestaCalorica" placeholder="Ingresa tu ingesta calórica">
-                </div>
-                <button type="submit" class="btn btn-primary">Guardar</button>
-            </form>
+        <!-- Sección de Edición -->
+        <div class="container d-flex align-items-start shadow p-4 rounded" id="editSection">
+            <div class="col-md-6">
+                <img src="/img/dietaeditarimg.png" class="img-fluid rounded-start" width="500px">
+            </div>
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+                <h4 class="text-center fw-bold mb-4">Editar Información Personal</h4>
+                <form>
+                    <div class="mb-3">
+                        <label for="peso" class="form-label fw-bold">Peso (kg):</label>
+                        <input type="number" class="form-control" id="peso" placeholder="Ingresa tu peso" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" required>
+                        <div class="form-text">Introduce tu peso en kilogramos.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="altura" class="form-label">Altura (cm):</label>
+                        <input type="number" class="form-control" id="altura" placeholder="Ingresa tu altura" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" required>
+                        <div class="form-text">Introduce tu altura en centímetros.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ingestaCalorica" class="form-label">Ingesta Calórica (kcal):</label>
+                        <input type="number" class="form-control" id="ingestaCalorica" placeholder="Ingresa tu ingesta calórica" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" required>
+                        <div class="form-text">Introduce tu ingesta calórica diaria.</div>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Guardar</button>
+                </form>
+            </div>
         </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="home.js"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/home.js"></script>
 
-
-</body>
+    </body>
 </html>
-=======
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar con Paleta de Colores Pastel y Sección Editable</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/home.css">
-    <link rel="icon" href="../logo.jpg" type="image/x-icon">
-
-
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container-fluid">
-            <!-- Logo a la izquierda -->
-            <a class="navbar-brand" href="#">
-                <img src="ruta-a-tu-logo.png" alt="Logo">
-            </a>
-            
-            <!-- Botón de colapso para dispositivos móviles -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Enlaces de navegación a la derecha -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Info</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="toggleEditSection()">Editar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Gráficos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="toggleChat()">Chat</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Sección del chat -->
-    <div id="chatContainer" class="chatcontainer">
-        <div class="nav-barchat">
-            <a>Chat</a>
-            <div class="close" onclick="toggleChat()">
-                <div class="line one"></div>
-                <div class="line two"></div>
-            </div>
-        </div>
-        <div class="messages-area">
-            <div class="message one"></div>
-            <div class="message two"></div>
-            <div class="message three"></div>
-            <div class="message four"></div>
-            <div class="message five"></div>
-            <div class="message six"></div>
-        </div>
-        <div class="sender-area">
-            <div class="input-place">
-                <input placeholder="Send a message." class="send-input" type="text">
-                <div class="send">
-                    <svg class="send-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="#6B6C7B" d="M481.508,210.336L68.414,38.926c-17.403-7.222-37.064-4.045-51.309,8.287C2.86,59.547-3.098,78.551,1.558,96.808 L38.327,241h180.026c8.284,0,15.001,6.716,15.001,15.001c0,8.284-6.716,15.001-15.001,15.001H38.327L1.558,415.193 c-4.656,18.258,1.301,37.262,15.547,49.595c14.274,12.357,33.937,15.495,51.31,8.287l413.094-171.409 C500.317,293.862,512,276.364,512,256.001C512,235.638,500.317,218.139,481.508,210.336z"></path>
-                    </svg>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Sección de Edición -->
-    <div class="container">
-        <div id="editSection">
-            <h4 class="text-center">Editar Información Personal</h4>
-            <form>
-                <div class="mb-3">
-                    <label for="peso" class="form-label">Peso (kg):</label>
-                    <input type="number" class="form-control" id="peso" placeholder="Ingresa tu peso">
-                </div>
-                <div class="mb-3">
-                    <label for="altura" class="form-label">Altura (cm):</label>
-                    <input type="number" class="form-control" id="altura" placeholder="Ingresa tu altura">
-                </div>
-                <div class="mb-3">
-                    <label for="ingestaCalorica" class="form-label">Ingesta Calórica (kcal):</label>
-                    <input type="number" class="form-control" id="ingestaCalorica" placeholder="Ingresa tu ingesta calórica">
-                </div>
-                <button type="submit" class="btn btn-primary">Guardar</button>
-            </form>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/home.js"></script>
-
-
-</body>
-</html>
->>>>>>> 7ab8c59 (carga):html/home.html
