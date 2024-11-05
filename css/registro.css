@@ -1,0 +1,28 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ddedea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+}
+
+.form-control {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.row .col-6 {
+    padding: 0 5px;
+}
+
+.container {
+    max-width: 600px;
+    margin-top: 20px;
+}
