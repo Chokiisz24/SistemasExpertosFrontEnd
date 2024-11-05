@@ -24,6 +24,12 @@ body {
     object-fit: cover;
 }
 
+#imagen1 img {
+    width: 380px !important;
+    object-fit: cover;
+}
+
+
 .input-3d {
     font-size: 1.05rem;
     padding: 0.5rem;
@@ -103,4 +109,12 @@ body {
 .d-flex {
     display: flex;
     align-items: center;
+}
+
+#seccion1 {
+    display: block; /* Muestra la sección 1 al inicio */
+}
+
+#seccion2 {
+    display: none; /* Oculta la sección 2 inicialmente */
 }

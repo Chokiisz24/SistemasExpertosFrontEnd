@@ -29,7 +29,11 @@ document.getElementById("registerForm").addEventListener("submit", function (eve
     if (mensajeError) {
         alert(mensajeError);
     } else {
-        alert("Formulario válido. Enviando...");
-        document.getElementById("registerForm").submit(); 
+        alert("Formulario válido. Pasando a la siguiente sección...");
+        
+        // Oculta la sección 1 y muestra la sección 2
+        document.getElementById("seccion2").style.display = "block";
+        document.getElementById("seccion1").style.display = "none";
+
     }
 });
