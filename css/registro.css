@@ -2,27 +2,105 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: #ddedea;
+    background-image: linear-gradient(to right top, #e8dff5, #f6dfef, #ffe1e7, #ffe5e0, #ffebdc, #f9eeda, #f1f2dc, #e8f5e1, #dcf4e8, #d6f2f0, #d6eef5, #daeaf6);
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
 }
 
-.form-group label {
-    font-size: 0.9rem;
-}
-
-.form-control {
-    font-size: 0.9rem;
-    text-align: center;
-}
-
-.row .col-6 {
-    padding: 0 5px;
-}
-
-.container {
+#contenido {
     max-width: 600px;
-    margin-top: 20px;
+}
+
+.card {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0) !important;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#imagen img {
+    width: 300px !important;
+    object-fit: cover;
+}
+
+.input-3d {
+    font-size: 1.05rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2), -3px -3px 10px rgba(255, 255, 255, 0.5);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.377);
+}
+
+.input-3d:hover {
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3), -6px -6px 15px rgba(255, 255, 255, 0.6);
+    transform: scale(1.03);
+}
+
+.input-3d:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.8), 0 0 15px rgba(0, 123, 255, 0.5);
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+
+.btn-register {
+    background-color: #b19cd9;    
+    color: white;
+    border: none;
+}
+
+.btn-register:hover {
+    background-color: #9f87c0;
+}
+
+.custom-checkbox {
+    display: none;
+    /* Oculta el checkbox por defecto */
+}
+
+.toggle-password-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-password-label i {
+    font-size: 1.25rem;
+    /* Aumenta el tamaño del icono */
+    color: #6c757d;
+    /* Color del icono */
+    transition: color 0.3s ease;
+}
+
+.custom-checkbox:checked+.toggle-password-label i {
+    color: #007bff;
+    /* Cambia el color del icono cuando está seleccionado */
+}
+
+.input-group-text {
+    background-color: transparent;
+    /* Fondo transparente */
+}
+
+.input-group-text:focus {
+    outline: none;
+    /* Elimina el borde de enfoque */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Sombra en enfoque */
+}
+
+#imagen img {
+    width: 320px !important;
+    object-fit: cover;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
 }

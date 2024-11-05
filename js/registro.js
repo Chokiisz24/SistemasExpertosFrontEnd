@@ -7,6 +7,7 @@ document.getElementById("registerForm").addEventListener("submit", function (eve
     const username = document.getElementById("username").value.trim();
     const password = document.getElementById("password").value;
     const edad = parseInt(document.getElementById("edad").value, 10);
+    const genero = document.getElementById("sexo").value;
 
     let mensajeError = "";
 
@@ -20,4 +21,15 @@ document.getElementById("registerForm").addEventListener("submit", function (eve
         mensajeError += "La edad debe ser un número entre 18 y 120.\n";
     }
 
+    // Validación de género
+    if (genero === "") {
+        mensajeError += "Debe seleccionar un género.\n";
+    }
+
+    if (mensajeError) {
+        alert(mensajeError);
+    } else {
+        alert("Formulario válido. Enviando...");
+        document.getElementById("registerForm").submit(); 
+    }
 });
